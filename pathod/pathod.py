@@ -272,6 +272,8 @@ class PathodHandler(tcp.BaseHandler):
 
         while not self.finished:
             handler, l = handler(logger)
+            import time
+            time.sleep(2)
             if l:
                 self.addlog(l)
             if not handler:
